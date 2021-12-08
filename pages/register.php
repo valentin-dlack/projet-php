@@ -63,7 +63,6 @@ $pdo = new PDO($dsn, $username, $password);
             }
 
             $cryptedPswd = password_hash($password, PASSWORD_BCRYPT);
-            echo $cryptedPswd;
             
             $query = "INSERT INTO users (username, email, password, admin) VALUES (:username, :email, :password, :admin);";
             $datas = [
